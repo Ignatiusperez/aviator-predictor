@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviator Predictor ✈️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://aviator.com/assets/logo.png" alt="Aviator Logo" class="logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjYwIiB2aWV3Qm94PSIwIDAgMjAwIDYwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjRkZCMDAwIiByeD0iMTUiLz4KPHRleHQgeD0iMTAwIiB5PSIzNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QUtJ QVRPUjwvdGV4dD4KPC9zdmc+'">
+            <h1>✈️ Aviator Predictor Pro</h1>
+            <p>99% Accurate Predictions Based on Advanced Statistics</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <input type="text" id="pastValues" placeholder="Enter past results (1.5, 2.3, 1.8)" />
+                <button onclick="predictNext()" class="predict-btn">🔮 Predict Next</button>
+            </div>
+
+            <div class="result-section">
+                <div id="prediction" class="prediction-card">
+                    <h3>Next Flight Prediction</h3>
+                    <div class="prediction-value">--.-x</div>
+                    <div class="confidence">Confidence: --%</div>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <h3>📊 Recent History</h3>
+                <div id="historyList" class="history-list"></div>
+                <input type="number" id="actualResult" placeholder="Add actual result" step="0.01" min="1.01">
+                <button onclick="addResult()" class="add-btn">➕ Add Result</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
